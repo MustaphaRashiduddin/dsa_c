@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+_NODE_H	node.h	2;"	d
+dat	node.h	/^        int dat;$/;"	m	struct:node
+del_list	node.c	/^void del_list(struct node *el)$/;"	f
+main	main.c	/^int main(int argc, char **argv)$/;"	f
+node	node.h	/^struct node {$/;"	s
+nxt	node.h	/^        struct node *nxt;$/;"	m	struct:node	typeref:struct:node::node
+print_list	node.c	/^void print_list(struct node *el)$/;"	f
+push	node.c	/^void push(struct node **el, int dat)$/;"	f
