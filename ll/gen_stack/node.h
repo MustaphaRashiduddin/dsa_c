@@ -7,6 +7,7 @@ struct node {
 };
 
 void push(struct node **el, void *dat);
+void *pop(struct node **el);
 void print_list(struct node *el, void (*print)(struct node *el));
 void del_list(struct node *el);
 

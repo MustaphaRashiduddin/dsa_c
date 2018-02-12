@@ -1,8 +1,8 @@
 #include "node.h"
 #include <stdio.h>
 
-void p_int(struct node *el);
-void p_str(struct node *el);
+void p_n_int(struct node *el);
+void p_n_str(struct node *el);
 
 int main(int argc, char **argv)
 {
@@ -13,7 +13,13 @@ int main(int argc, char **argv)
         push(&root, &n[2]);
         push(&root, &n[3]);
 
-        print_list(root, p_int);
+        print_list(root, p_n_int);
+
+        printf("\npoppin ints\n");
+        printf("%d ", *(int *)pop(&root));
+        printf("%d ", *(int *)pop(&root));
+        printf("%d ", *(int *)pop(&root));
+        printf("%d ", *(int *)pop(&root));
         printf("\n");
 
         del_list(root);
@@ -28,18 +34,26 @@ int main(int argc, char **argv)
         push(&s_root, &s[2]);
         push(&s_root, &s[3]);
 
-        print_list(s_root, p_str);
+        print_list(s_root, p_n_str);
+
+        printf("poppin strings\n");
+        printf("%s ", *(char **)pop(&s_root));
+        printf("%s ", *(char **)pop(&s_root));
+        printf("%s ", *(char **)pop(&s_root));
+        printf("%s ", *(char **)pop(&s_root));
+        printf("\n");
+
 
         del_list(s_root);
         return 0;
 }
 
-void p_int(struct node *el)
+void p_n_int(struct node *el)
 {
         printf("%d ", *(int *)el->dat);
 }
 
-void p_str(struct node *el)
+void p_n_str(struct node *el)
 {
         printf("%s\n", *(char **)el->dat);
 }
