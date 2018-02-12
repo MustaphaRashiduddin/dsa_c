@@ -6,6 +6,10 @@ void push(struct node **el, int dat)
 {
         if (*el==0) {
                 *el = malloc(sizeof(struct node));
+                if (el==0) {
+                        fprintf(stderr, "failed to allocate memory in push function");
+                        exit(1);
+                }
                 (*el)->nxt = 0;
                 (*el)->dat = dat;
         } else {
