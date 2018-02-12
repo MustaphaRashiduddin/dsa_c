@@ -43,7 +43,6 @@ int main(int argc, char **argv)
         printf("%s ", *(char **)pop(&s_root));
         printf("\n");
 
-
         del_list(s_root);
         return 0;
 }
