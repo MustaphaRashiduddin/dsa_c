@@ -10,5 +10,6 @@ del_list	node.c	/^void del_list(struct node *el)$/;"	f
 main	main.c	/^int main(int argc, char **argv)$/;"	f
 node	node.h	/^struct node {$/;"	s
 nxt	node.h	/^        struct node *nxt;$/;"	m	struct:node	typeref:struct:node::node
+pop	node.c	/^int pop(struct node **el)$/;"	f
 print_list	node.c	/^void print_list(struct node *el)$/;"	f
 push	node.c	/^void push(struct node **el, int dat)$/;"	f

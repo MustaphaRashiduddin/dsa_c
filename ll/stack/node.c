@@ -1,6 +1,7 @@
 #include "node.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 
 void push(struct node **el, int dat)
 {
@@ -15,6 +16,18 @@ void push(struct node **el, int dat)
         } else {
                 push(&(*el)->nxt, dat);
         }
+}
+
+int pop(struct node **el)
+{
+        assert(*el!=0);
+
+        if ((*el)->nxt==0) {
+                int dat = (*el)->dat;
+                *el=0;
+                return dat;
+        }
+        return pop(&(*el)->nxt);
 }
 
 void print_list(struct node *el)

@@ -1,4 +1,5 @@
 #include "node.h"
+#include <stdio.h>
 
 int main(int argc, char **argv)
 {
@@ -9,6 +10,11 @@ int main(int argc, char **argv)
         push(&root, 113);
 
         print_list(root);
+
+        printf("\n%d", pop(&root));
+        printf("\n%d", pop(&root));
+        printf("\n%d", pop(&root));
+        printf("\n%d", pop(&root));
 
         del_list(root);
 

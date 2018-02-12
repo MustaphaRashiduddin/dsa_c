@@ -9,5 +9,6 @@ struct node {
 void push(struct node **el, int dat);
 void print_list(struct node *el);
 void del_list(struct node *el);
+int pop(struct node **el);
 
 #endif
