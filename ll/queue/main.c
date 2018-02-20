@@ -15,6 +15,8 @@ int main(int argc, char **argv)
         deq(&hd);
         deq(&hd);
         deq(&hd);
+        deq(&hd);
+        deq(&hd);
         print_queue(hd);
         del_queue(hd);
         return 0;

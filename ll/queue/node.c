@@ -24,9 +24,9 @@ int deq(struct node **el)
 
 int _deq_aux(struct node *el)
 {
-        while ((el)->nxt->nxt != 0)
-                el = (el)->nxt;
-        int n = (el)->nxt->dat;
+        while (el->nxt->nxt != 0)
+                el = el->nxt;
+        int n = el->nxt->dat;
         free(el->nxt);
         el->nxt = 0;
         return n;
