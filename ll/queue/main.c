@@ -11,13 +11,14 @@ int main(int argc, char **argv)
         enq(&hd, 8);
         enq(&hd, 9);
         enq(&hd, 10);
-        deq(&hd);
-        deq(&hd);
-        deq(&hd);
-        deq(&hd);
-        deq(&hd);
-        deq(&hd);
         print_queue(hd);
+        printf("\n");
+        printf("%d\n", deq(&hd));
+        printf("%d\n", deq(&hd));
+        printf("%d\n", deq(&hd));
+        printf("%d\n", deq(&hd));
+        printf("%d\n", deq(&hd));
+        printf("%d\n", deq(&hd));
         del_queue(hd);
         return 0;
 }

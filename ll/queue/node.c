@@ -1,6 +1,7 @@
 #include "node.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 
 void enq(struct node **hd, int dat)
 {
@@ -10,26 +11,17 @@ void enq(struct node **hd, int dat)
         *hd = el;
 }
 
-
 int deq(struct node **el)
 {
+        assert(*el!=0);
+
         if ((*el)->nxt == 0) {
                 int n = (*el)->dat;
                 free(*el);
                 *el = 0;
                 return n;
         }
-        return _deq_aux(*el);
-}
-
-int _deq_aux(struct node *el)
-{
-        while (el->nxt->nxt != 0)
-                el = el->nxt;
-        int n = el->nxt->dat;
-        free(el->nxt);
-        el->nxt = 0;
-        return n;
+        return deq(&(*el)->nxt);
 }
 
 void print_queue(struct node *hd)

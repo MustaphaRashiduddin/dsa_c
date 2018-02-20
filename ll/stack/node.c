@@ -22,10 +22,11 @@ int pop(struct node **el)
 {
         assert(*el!=0);
 
-        if ((*el)->nxt==0) {
-                int dat = (*el)->dat;
-                *el=0;
-                return dat;
+        if ((*el)->nxt == 0) {
+                int n = (*el)->dat;
+                free(*el);
+                *el = 0;
+                return n;
         }
         return pop(&(*el)->nxt);
 }

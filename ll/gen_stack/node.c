@@ -22,9 +22,10 @@ void *pop(struct node **el)
 {
         assert(*el!=0);
 
-        if ((*el)->nxt==0) {
+        if ((*el)->nxt == 0) {
                 void *dat = (*el)->dat;
-                *el=0;
+                free(*el);
+                *el = 0;
                 return dat;
         }
         return pop(&(*el)->nxt);
