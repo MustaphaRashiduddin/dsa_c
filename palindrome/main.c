@@ -9,7 +9,7 @@ int main(int argc, char **argv)
         }
 
         char *str = argv[1];
-        int n = strlen(str);
+        unsigned char n = strlen(str);
         char pal = 1;
 
         for (int i=0; i<n; i++)
