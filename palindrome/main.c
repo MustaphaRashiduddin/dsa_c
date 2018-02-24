@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 
         char *str = argv[1];
         int n = strlen(str);
-        int pal = 1;
+        char pal = 1;
 
         for (int i=0; i<n; i++)
                 if (str[i] != str[n-i-1]) {
