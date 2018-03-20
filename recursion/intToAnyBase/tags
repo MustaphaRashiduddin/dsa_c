@@ -4,5 +4,5 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-convert	main.c	/^void convert(int n, int b, char *str)$/;"	f
+convert	main.c	/^char *convert(int n, int b, char *str)$/;"	f
 main	main.c	/^int main(int argc, char **argv)$/;"	f
