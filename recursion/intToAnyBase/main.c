@@ -13,13 +13,15 @@ int main(int argc, char **argv)
         return 0;
 }
 
+int i=1;
 char *convert(int n, int b, char *str)
 {
         if (n<b) {
                 sprintf(str, "%d", n%b);
                 return str;
         }
-        sprintf(str, "%d", n%b);
-        char *sub = convert(n/b, b, str+1);
+        char *sub = convert(n/b, b, str);
+        sprintf(str+i, "%d", n%b);
+        i++;
         return sub;
 }
