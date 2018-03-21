@@ -1,27 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-char *convert(int n, int b, char *str);
+void convert(int n, int b, char *str, int f, int l);
 
 int main(int argc, char **argv)
 {
         char str[100];
-        /* convert(10, 2, str); */
-        convert(769, 10, str);
+        int n = 25;
+        int b = 2;
+        int l = ceil(log(n)/log(b));
+        convert(n, b, str, 0, l);
         printf("%s", str);
 
         return 0;
 }
 
-int i=1;
-char *convert(int n, int b, char *str)
+void convert(int n, int b, char *str, int i, int l)
 {
         if (n<b) {
                 sprintf(str, "%d", n%b);
-                return str;
+                return;
         }
-        char *sub = convert(n/b, b, str);
-        sprintf(str+i, "%d", n%b);
-        i++;
-        return sub;
+        convert(n/b, b, str, ++i, l);
+        sprintf(str+(l-i), "%d", n%b);
 }
