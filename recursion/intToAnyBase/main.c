@@ -4,7 +4,7 @@
 
 // returns malloced (char *)
 char *convert(int n, int b);
-void convert_aux(int n, int b, char *str, int f, int l);
+void convert_aux(int n, int b, char *str, int i, int l);
 
 const char *nums = {"0123456789ABCDEF"};
 
