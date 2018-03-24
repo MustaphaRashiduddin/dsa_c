@@ -24,7 +24,7 @@ char *convert(int n, int b)
 {
         int l = ceil(log(n)/log(b));
         char *str = malloc(l+1);
-        convert_aux(n, b, str, 0, l);
+        convert_aux(n, b, str, 1, l);
         return str;
 }
 
@@ -34,6 +34,6 @@ void convert_aux(int n, int b, char *str, int i, int l)
                 sprintf(str, "%c", nums[n%b]);
                 return;
         }
-        convert_aux(n/b, b, str, ++i, l);
+        convert_aux(n/b, b, str, i+1, l);
         sprintf(str+(l-i), "%c", nums[n%b]);
 }
